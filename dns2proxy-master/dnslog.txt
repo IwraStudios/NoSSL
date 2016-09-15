@@ -1,0 +1,7 @@
+
+2016-05-05 18:59:01 Client IP: 127.0.0.1    request is    www.youtube-nocookie.com. IN A
+2016-05-05 18:59:08 Client IP: 127.0.0.1    request is    googleads.g.doubleclick.net. IN A
+2016-05-05 18:59:38 Client IP: 127.0.0.1    request is    www.google.com. IN A
+2016-05-05 19:00:08 Client IP: 127.0.0.1    request is    s.ytimg.com. IN A
+2016-05-05 19:00:38 Client IP: 127.0.0.1    request is    s.ytimg.com. IN AAAA
+2016-05-05 19:01:08 Client IP: 127.0.0.1    request is    www.gstatic.com. IN A
