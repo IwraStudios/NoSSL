@@ -1,6 +1,7 @@
 #!/bin/bash
 
 open(){
+read -p "What Interface do you want to use(ex: wlan0)" INT
 gateway=$(/sbin/ip route | awk '/default/ { print $3}')
 echo "${TARGET}"
     ping -c 1 -t 1 ${TARGET} > /dev/null 2> /dev/null  # ping and discard output
@@ -33,9 +34,6 @@ case $i in
     echo "-t or --target with input ip"
     echo "-h or --help to show this menu"
     shift # past argument with no value
-    ;;
-    -i=*|--interface=*)
-    INT="${i#*=}"
     ;;
     *)
     echo "-t or --target with input ip"
