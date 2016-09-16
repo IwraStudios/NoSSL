@@ -3,7 +3,7 @@
 This repository is for a project I created a long ago as an easy way to setup SSLstrip and SSLsplit so here it is.
 
 
-```javascript
+```
 usage: [ba[sh]] ./OpenBot[debug].sh [--strip]  [--split]
 DO NOT use --strip and --split at the same time
 ```
