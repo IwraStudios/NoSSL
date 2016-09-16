@@ -5,7 +5,7 @@ This repository is for a project I created a long ago as an easy way to setup SS
 
 ```javascript
 usage: [ba[sh]] ./OpenBot[debug].sh [--strip]  [--split]
-**DO NOT** use strip and split at the same time
+DO NOT use strip and split at the same time
 ```
 
 **WARNING** to use the SSLsplit requires to have it installed, Kali 2016.2 recommended
