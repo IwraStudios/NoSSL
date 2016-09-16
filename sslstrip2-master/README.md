@@ -1,6 +1,8 @@
 SSLstrip+
 ========
 
+Original on https://github.com/LeonardoNve/sslstrip2
+
 This is just a mirror of the original SSLstrip+ code by Leonardo Nve, which had to be taken down because of a gag order.
 
 **For this to work you also need a DNS server that reverses the changes made by the proxy, you can find it at https://github.com/singe/dns2proxy**

