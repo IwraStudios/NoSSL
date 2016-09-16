@@ -9,7 +9,7 @@ DO NOT use --strip and --split at the same time
 ```
 
 **WARNINGS** 
-* ONLY use an networks where you are allowed to test it on(e.g. pen-tester) /n
+* ONLY use an networks where you are allowed to test it on(e.g. pen-tester)
 * to use the SSLsplit requires to have it installed, Kali 2016.2 recommended
 
 
