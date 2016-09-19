@@ -1,5 +1,9 @@
 #!/bin/bash
 
+install(){
+	
+}
+
 open(){
 read -p "What is the subnet(ex: 192.168.10.)" yn1
 read -p "What Interface do you want to use(ex: wlan0)" int
@@ -65,6 +69,10 @@ case $i in
     --strip)
     sstrip
     shift # past argument=value
+    ;;
+    --install)
+    install
+    shift
     ;;
     -l=*|--lib=*)
     LIBPATH="${i#*=}"
