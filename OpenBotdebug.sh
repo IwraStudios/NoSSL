@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install(){
-	
+	echo "Not implemented"
 }
 
 open(){
@@ -23,7 +23,14 @@ done
 }
 
 setup(){
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
 sudo echo 1 > /proc/sys/net/ipv4/ip_forward
 echo "WARNING: this is not an error but the iptables are going to be flushed if you still need something from there quit this program now!"
 sleep 5
@@ -39,6 +46,7 @@ echo "Setting up ARPspoof"
 read -p "What is the subnet(ex: 192.168.10.)" yn1
 read -p "What Interface do you want to use(ex: wlan0)" int
 #xterm -e "/root/Desktop/PROG/DedicatedARP.sh -s=${yn1} -i=${int}" &
+(bash "${DIR}/DedicatedARP.sh -s=${yn1} -i=${int}" &)
 }
 
 
