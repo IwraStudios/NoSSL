@@ -8,7 +8,15 @@ usage: [ba[sh]] ./OpenBot[debug].sh [--strip]  [--split]
 DO NOT use --strip and --split at the same time
 ```
 
-**WARNINGS** 
+**Requirements**
+* Have python installed with: scapy, dnspython and twisted
+on debian:
+`
+sudo apt-get install python-scapy python-dnspython python-twisted 
+`
+
+ 
+**WARNINGS**  
 * ONLY use an networks where you are allowed to test it on(e.g. pen-tester)
 * to use the SSLsplit requires to have it installed, Kali 2016.2 recommended
 
