@@ -34,6 +34,7 @@ import argparse
 import json
 import sys
 from base64 import b32decode
+from scapy.all import *
 
 consultas = {}
 spoof = {}
@@ -279,7 +280,6 @@ def parse_packet(pkt):
     global ip1
     global consultas
     global ip2
-    from scapy.all import *
     
     ip = pkt.getlayer(IP)
 
@@ -324,7 +324,6 @@ def parse_packet(pkt):
 def go():
     global ip1
     global dev
-    from scapy.all import *
 
     bpffilter = "ip and dst host %s and not src host %s and !(tcp dst port 80 or tcp dst port 443) and (not host %s)" % (
         ip1, ip1, adminip)
