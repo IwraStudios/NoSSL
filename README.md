@@ -14,7 +14,11 @@ on debian:
 `
 sudo apt-get install python-scapy python-dnspython python-twisted 
 `
+* Have dsniff installed (for arpspoof) on debian:
+`sudo apt-get install dsniff`
 
+Full Install(debian):
+ `sudo apt-get install python-scapy python-dnspython python-twisted dsniff sslsplit`
  
 **WARNINGS**  
 * ONLY use an networks where you are allowed to test it on(e.g. pen-tester)
